@@ -4,7 +4,7 @@ import { Icons } from "@/components/ui/Icons";
 export const DATA = {
   name: "Fabien",
   initials: "FL",
-  url: "",
+  url: "https://github.com/Fables7",
   location: "London",
   locationLink: "",
   description:

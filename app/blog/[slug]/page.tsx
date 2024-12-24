@@ -1,6 +1,7 @@
 import { getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
@@ -10,8 +11,9 @@ export async function generateMetadata({
   params: {
     slug: string;
   };
-}) {
-  const post = await getPost(params.slug);
+}): Promise<Metadata | undefined> {
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   const {
     title,
@@ -54,7 +56,8 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  const post = await getPost(params.slug);
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) {
     notFound();
