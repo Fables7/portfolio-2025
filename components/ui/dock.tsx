@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -33,6 +35,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     const mousex = useMotionValue(Infinity);
 
     const renderChildren = () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return React.Children.map(children, (child: any) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, {
