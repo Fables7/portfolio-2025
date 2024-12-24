@@ -1,0 +1,72 @@
+---
+title: "Building a Telegram Web App Game with Next.js and Prisma"
+publishedAt: "2024-12-15"
+summary: "My first post"
+---
+
+## Introduction
+
+During my time at **Devomon**, I was entrusted with a challenging, high-impact project: **build a fully functional Telegram Web App Game from scratch** within one month. The game needed to handle thousands of simultaneous players, integrate smoothly with Telegram’s messaging ecosystem, and maintain robust, secure data management on the back end. Here’s how I delivered a polished gaming experience—and attracted **80,000 active users** in the first month alone.
+
+## Why Next.js and Prisma?
+
+To meet the tight timeline and ensure a maintainable codebase, I selected **Next.js** for server-side rendering and rapid iteration. I paired it with **Prisma** (on top of **MySQL**) for simpler, type-safe database operations. This combination allowed me to quickly develop features and easily scale for future expansions.
+
+### Tech Stack Overview
+
+- **Next.js + React**: Efficient server-side rendering and a robust developer experience.
+- **TypeScript**: Provides type safety, reducing errors and improving code readability.
+- **Tailwind CSS**: Enables quick UI prototyping and consistent styling across components.
+- **MySQL + Prisma**: Facilitates seamless data modeling for players, game sessions, and scoring.
+- **Telegram API**: Handles user login, messaging, and real-time in-app interactions.
+
+## Setting Up the Schema
+
+One of my earliest tasks was designing the database schema to track player data, session info, and scores. I created models to handle essential details such as unique player information, game sessions, and more. This structure allowed me to easily query, update, and analyze gameplay data at scale.
+
+- **Player Model**: Tracked usernames, scores, and timestamps.
+- **GameSession Model**: Captured session-specific data, ensuring continuity and allowing detailed performance insights.
+
+## Front-End Development with Next.js
+
+To maintain a smooth user experience, I leveraged **server-side rendering** (SSR):
+
+- **Server-Side Rendering**: Relevant data was fetched on the server, enhancing performance and SEO by reducing the work on the client side.
+
+This approach minimized load times and provided a highly responsive user interface.
+
+## Integrating the Telegram API
+
+The Telegram Bot Platform offered a powerful way to let users interact with the game, check scores, and receive notifications. Key features included:
+
+1. **User Login**: Players logged in via Telegram’s deep linking, streamlining authentication.
+2. **Bot Chat**: A custom bot sent real-time announcements and game updates, keeping players engaged.
+3. **Web App Integration**: Telegram’s web app SDK supplied user data—like `username`—directly to the front end, allowing seamless user experiences without additional sign-ups.
+
+## Performance Optimizations
+
+Delivering an engaging, interactive game to a large user base required careful tuning:
+
+- **Code Splitting**: Loaded only essential components on initial render, deferring non-critical modules to reduce initial load times.
+- **Database Indexing**: Indexed frequently queried fields (like `username`), accelerating queries and updates.
+- **Caching Strategy**: Implemented short-term caching on SSR endpoints, cutting down redundant requests.
+
+These optimizations resulted in a **30% latency reduction**, ensuring the game stayed fast and responsive, even at scale.
+
+## Key Results
+
+1. **80,000 Active Users** in the first month—surpassing initial adoption estimates.
+2. **Reduced Latency by 30%**: Careful optimization and caching kept the platform highly responsive.
+3. **Modular Codebase**: Enabled fast addition of new mini-games and features, future-proofing the platform.
+
+## Lessons Learned
+
+- **TypeScript** allowed for safer, more confident refactoring, preventing common runtime errors and saving time in the long run.
+- **Next.js + Prisma** proved a powerful stack for rapidly iterating on feature ideas without sacrificing project structure.
+- **Telegram’s APIs** provided the flexibility to build a community-centric application, though it required careful planning around user context and security.
+
+## Conclusion
+
+Building this **Telegram Web App Game** with Next.js, Prisma, and Tailwind CSS under a tight timeline was both challenging and rewarding. The end result: a scalable, feature-rich platform that brought in tens of thousands of players. If you’d like more details on how I approached each stage, feel free to check out [my GitHub](https://github.com/Fables7) or [connect on LinkedIn](https://www.linkedin.com/in/fabien-lestrat-1ab41b1b1/).
+
+---
