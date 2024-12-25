@@ -18,7 +18,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto w-max h-full p-2 flex items-end rounded-full border"
+  "mx-auto w-max gap-x-3 h-full p-2  flex items-end rounded-full border"
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -35,7 +35,6 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     const mousex = useMotionValue(Infinity);
 
     const renderChildren = () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return React.Children.map(children, (child: any) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, {

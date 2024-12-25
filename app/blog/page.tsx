@@ -15,7 +15,7 @@ export default async function BlogPage() {
   return (
     <section>
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
+        <h1 className="font-medium text-4xl mb-8 tracking-tighter">blog</h1>
       </BlurFade>
       {posts
         .sort((a, b) => {
@@ -33,8 +33,8 @@ export default async function BlogPage() {
               href={`/blog/${post.slug}`}
             >
               <div className="w-full flex flex-col">
-                <p className="tracking-tight">{post.metadata.title}</p>
-                <p className="h-6 text-xs text-muted-foreground">
+                <p className="tracking-tight text-2xl">{post.metadata.title}</p>
+                <p className="h-6 text-xlg text-muted-foreground">
                   {post.metadata.publishedAt}
                 </p>
               </div>
