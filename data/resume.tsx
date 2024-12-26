@@ -108,8 +108,8 @@ export const DATA = {
       location: "London, UK",
       title: "Marketing Web Developer",
       logoUrl: "/visionDirect.webp",
-      start: "February 2021",
-      end: "August 2021",
+      start: "February 2024",
+      end: "August 2024",
       description:
         "Utilized CoreMedia CMS to manage and update content across multiple domains—delivering content 30% faster—while collaborating with the design team to integrate visual elements for a consistent brand presence, optimizing pages to reflect modern design principles that reduced load time by 20% and improved SEO rankings, and leading the implementation of A/B testing that drove a 15% increase in user engagement.",
     },
